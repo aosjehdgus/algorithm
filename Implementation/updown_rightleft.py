@@ -55,7 +55,7 @@ move_types = ['L', 'R', 'U', 'D']
 
 # 이동 계획을 하나씩 확인하기
 for plan in plans:
-    # 이동 후 좌표 구ㅏ기
+    # 이동 후 좌표 구하기
     for i in range(len(move_types)):
         if plan == move_types[i]:
             nx = x + dx[i]
