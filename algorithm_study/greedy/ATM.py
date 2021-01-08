@@ -37,18 +37,13 @@ result = 0
 # 필요한 시간들을 담을 리스트 초기화
 t_list = []
 
-# 걸리는 시간들을 리스트로 만든다.
-order = list(map(int, input().split()))
+# 걸리는 시간들을 리스트로 만들고 오름 차순 정렬 시켜, 적게 걸리는 순으로 만든다.
+order = sorted(list(map(int, input().split())))
 
-# 오름차순으로 정렬시켜서, 적게 걸리는 순으로 만든다.
-s_order = sorted(order)
-
-# 각 각 필요한 시간들을 리스트에 담는다.
+# 각 각 필요한 시간들을 리스트에 담는다. 그 리스트 값의 합을 구한다.
 for i in range(n):
-    t += s_order[i]
+    t += order[i]
     t_list.append(t)
-
-for j in range(len(t_list)):
-    result += t_list[j]
+    result += t_list[i]
 
 print(result)
