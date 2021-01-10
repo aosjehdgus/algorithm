@@ -25,25 +25,42 @@
 # 출력
 # 첫째 줄에 각 사람이 돈을 인출하는데 필요한 시간의 합의 최솟값을 출력한다.
 
+import sys
 # 몇 명의 사람이 돈을 인출하는지 입력을 받는다.
-n = int(input())
-
+n = int(sys.stdin.readline())
 # 필요한 시간 값 초기화
 t = 0
-
 # 필요한 시간의 합 초기화
 result = 0
-
 # 필요한 시간들을 담을 리스트 초기화
 t_list = []
-
 # 걸리는 시간들을 리스트로 만들고 오름 차순 정렬 시켜, 적게 걸리는 순으로 만든다.
 order = sorted(list(map(int, input().split())))
-
 # 각 각 필요한 시간들을 리스트에 담는다. 그 리스트 값의 합을 구한다.
 for i in range(n):
     t += order[i]
     t_list.append(t)
     result += t_list[i]
-
 print(result)
+
+
+
+# # 몇 명의 사람이 돈을 인출하는지 입력을 받는다.
+# n = int(input())
+# # 필요한 시간 값 초기화
+# t = 0
+# # 필요한 시간의 합 초기화
+# result = 0
+# # 필요한 시간들을 담을 리스트 초기화
+# t_list = []
+# # 걸리는 시간들을 리스트로 만들고 오름 차순 정렬 시켜, 적게 걸리는 순으로 만든다.
+# order = sorted(list(map(int, input().split())))
+# # 각 각 필요한 시간들을 리스트에 담는다. 그 리스트 값의 합을 구한다.
+# for i in range(n):
+#     t += order[i]
+#     t_list.append(t)
+#     result += t_list[i]
+# print(result)
+
+
+
